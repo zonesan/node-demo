@@ -5,7 +5,7 @@ var app = express();
 app.get('/', function (req, res) {
     console.log("hostname: ",process.env.HOSTNAME);
     
-    var resp = "Hello ocean on a blue background.\n";
+    var resp = "Hello forest on a green background.\n";
     resp += "hostname: " + process.env.HOSTNAME + ", version: v1\n";
 
     //res.send("hostname: "+ process.env.HOSTNAME);
