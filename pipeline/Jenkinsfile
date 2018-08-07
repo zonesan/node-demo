@@ -1,0 +1,12 @@
+node {
+  stage ('build') {
+    openshiftBuild(buildConfig: 'node-demo', showBuildLogs: 'true')
+  }
+  stage ('test') {
+    sh "echo test do nothing and just sleep for 3 sec."
+    sh "sleep 3"
+  }
+  stage ('deploy') {
+    openshiftDeploy(deploymentConfig: 'node-demo')
+  }
+}
